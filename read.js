@@ -2,10 +2,13 @@ const textarea = document.getElementById('textarea');
 const body = document.getElementById('body');
 const display = document.getElementById('display');
 const btn = document.getElementById('btn');
+const fontChange = document.getElementById('fontChange');
 const btnLineheightAdd = document.getElementById('btnLineheightAdd');
 const btnLineheightSub = document.getElementById('btnLineheightSub');
 const btnStrictSizeAdd = document.getElementById('btnStrictSizeAdd');
 const btnStrictSizeSub = document.getElementById('btnStrictSizeSub');
+const btnfontWeightAdd = document.getElementById('btnfontWeightAdd');
+const btnfontWeightSub = document.getElementById('btnfontWeightSub');
 const btnMarginLeftAdd = document.getElementById('btnMarginLeftAdd');
 const btnMarginLeftSub = document.getElementById('btnMarginLeftSub');
 const btnMarginRightAdd = document.getElementById('btnMarginRightAdd');
@@ -21,6 +24,11 @@ btn.addEventListener('click', () => {
   display.innerText = textValue;
 })
 
+//フォント----------------------------------------------------------------------------------
+fontChange.addEventListener('click', () => {
+  const font = fontChange.value;
+  display.style.fontFamily = font;
+})
 
 //行間-------------------------------------------------------------------------------------
 let lineheightCount = 1.5;
@@ -47,6 +55,23 @@ btnStrictSizeSub.addEventListener('click', () => {
 
 })
 
+//文字の太さ---------------------------------------------------------------------------------
+let fontWeightCount = 400;
+btnfontWeightAdd.addEventListener('click', () => {
+  fontWeightCount += 200;
+  if (fontWeightCount > 900){
+    fontWeightCount = 900;
+  }
+  display.style.fontWeight = fontWeightCount;
+})
+
+btnfontWeightSub.addEventListener('click', () => {
+  fontWeightCount -= 200;
+  if (fontWeightCount < 100){
+    fontWeightCount = 100;
+  }
+  display.style.fontWeight = fontWeightCount;
+})
 //背景色---------------------------------------------------------------------------------
 const backColor = ["white","beige","skyblue","black"];
 let colorCount = 0;

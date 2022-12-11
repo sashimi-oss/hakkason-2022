@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>読みやすくするやつ</title>
   
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" 
+  rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
@@ -13,10 +16,23 @@
     <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
     <div class="btnarea">
       <button id="btn" class="btn">ボタン</button>
+      <select name="fontChange" id="fontChange">
+        <option value="Gothic">ゴシック</option>
+        <option value="serif">明朝体</option>
+        <option value="Nico Moji">ニコモジ</option>
+        <option value="Zen Maru Gothic">全丸ゴシック</option>
+        <option value="Zen Kurenaido">全 Kurenaido</option>
+        <option value="Zen Antique">全 Antique</option>
+        <option value="Zen Antique Soft">全 Antique Soft</option>
+        <option value="Zen Old Mincho">全古明朝</option>
+        <option value="Zen Kaku Gothic New">全角ゴシック新</option>
+      </select>
       <button id="btnLineheightAdd" class="btn">行間↑</button>
       <button id="btnLineheightSub" class="btn">行間↓</button>
       <button id="btnStrictSizeAdd" class="btn">文字サイズ↑</button>
       <button id="btnStrictSizeSub" class="btn">文字サイズ↓</button>
+      <button id="btnfontWeightAdd">文字の太さ↑</button>
+      <button id="btnfontWeightSub">文字の太さ↓</button>
       <button id="btnMarginLeftAdd" class="btn">marginLeft↑</button>
       <button id="btnMarginLeftSub" class="btn">marginLeft↓</button>
       <button id="btnMarginRightAdd" class="btn">marginRight↑</button>

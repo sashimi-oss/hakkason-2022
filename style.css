@@ -49,11 +49,11 @@ body {
 
 canvas {
   display: block;
+  
 }
 
 .display{
     margin: 0 100px 10px 100px;
-    line-height: normal;
-    
+    line-height: normal;    
 }
 
