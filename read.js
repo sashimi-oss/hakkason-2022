@@ -1,6 +1,7 @@
 const textarea = document.getElementById('textarea');
 const body = document.getElementById('body');
 const display = document.getElementById('display');
+const classWhite = document.querySelectorAll(".white");
 const btn = document.getElementById('btn');
 const fontChange = document.getElementById('fontChange');
 const btnLineheightAdd = document.getElementById('btnLineheightAdd');
@@ -73,18 +74,27 @@ btnStrictSizeSub.addEventListener('click', () => {
 //   display.style.fontWeight = fontWeightCount;
 // })
 //背景色---------------------------------------------------------------------------------
-const backColor = ["lightgreen","beige","skyblue","black"];
+const backColor = ["lightgray","beige","skyblue","black"];
 let colorCount = 0;
 btnBackgroundColor.addEventListener('click', () => {
   colorCount++;
   colorCount %= 4;
   if (colorCount === 3){
     display.style.color = 'white';
+    for (let i = 0; i < classWhite.length; i++){
+      classWhite.item(i).style.color = 'white';
+    }
+    
   } else {
     display.style.color = 'black';
+    for (let i = 0; i < classWhite.length; i++){
+      classWhite.item(i).style.color = 'black';
+    }
   }
   body.style.backgroundColor = `${backColor[colorCount]}`;
+  
   display.style.backgroundColor = `${backColor[colorCount]}`;
+  
 })
 
 //Marginのやつ--------------------------------------------------------------------------

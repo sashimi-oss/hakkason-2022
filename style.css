@@ -7,7 +7,6 @@
 
 .header {
   display:flex;
-  
 }
 
 .btn{
@@ -21,6 +20,11 @@
     outline: none;
     /*アニメーションの設定*/
     transition: all .3s;
+    border-radius: 50vh;
+}
+
+.table {
+  display: inline-block;
 }
 
 /*hoverをしたらボックスに影がつき、上に上がる*/
@@ -45,6 +49,9 @@
 
 body {
   background-color: lightgray;
+  margin-top: 10px;
+  width: 100%;
+
 }
 
 
@@ -55,8 +62,9 @@ canvas {
 }
 
 .display{
-    margin: 0 100px 10px 100px;
-    line-height: normal;    
+    margin: 10px 100px 10px 100px;
+    line-height: normal;   
+    background-color: lightgray; 
 }
 
 /*========= particle js を描画するエリア設定 ===============*/
