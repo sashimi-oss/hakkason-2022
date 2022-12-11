@@ -56,29 +56,35 @@ btnStrictSizeSub.addEventListener('click', () => {
 })
 
 //文字の太さ---------------------------------------------------------------------------------
-let fontWeightCount = 400;
-btnfontWeightAdd.addEventListener('click', () => {
-  fontWeightCount += 200;
-  if (fontWeightCount > 900){
-    fontWeightCount = 900;
-  }
-  display.style.fontWeight = fontWeightCount;
-})
+// let fontWeightCount = 400;
+// btnfontWeightAdd.addEventListener('click', () => {
+//   fontWeightCount += 200;
+//   if (fontWeightCount > 900){
+//     fontWeightCount = 900;
+//   }
+//   display.style.fontWeight = fontWeightCount;
+// })
 
-btnfontWeightSub.addEventListener('click', () => {
-  fontWeightCount -= 200;
-  if (fontWeightCount < 100){
-    fontWeightCount = 100;
-  }
-  display.style.fontWeight = fontWeightCount;
-})
+// btnfontWeightSub.addEventListener('click', () => {
+//   fontWeightCount -= 200;
+//   if (fontWeightCount < 100){
+//     fontWeightCount = 100;
+//   }
+//   display.style.fontWeight = fontWeightCount;
+// })
 //背景色---------------------------------------------------------------------------------
-const backColor = ["white","beige","skyblue","black"];
+const backColor = ["lightgreen","beige","skyblue","black"];
 let colorCount = 0;
 btnBackgroundColor.addEventListener('click', () => {
   colorCount++;
   colorCount %= 4;
+  if (colorCount === 3){
+    display.style.color = 'white';
+  } else {
+    display.style.color = 'black';
+  }
   body.style.backgroundColor = `${backColor[colorCount]}`;
+  display.style.backgroundColor = `${backColor[colorCount]}`;
 })
 
 //Marginのやつ--------------------------------------------------------------------------
@@ -143,8 +149,12 @@ display.addEventListener('mouseup', () => {
 
         console.log(anchorNode);
         console.log(anchorNode.parentElement);
+        if (anchorNode !== display){
         anchorNode.parentElement.replaceWith(anchorNode);
         anchorNode.parentElement.normalize();
+        }
+        
+        
         //let tag = anchorNode.parentElement;
         //let result = tag.toStrong().replace(/^<mark>(.+?)<\/mark>$/, '$1');
         //range.innerText = anchorNode;      
