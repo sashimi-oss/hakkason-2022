@@ -1,106 +1,112 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>読みやすくするやつ</title>
-  
+
   <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" 
-  rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="body">
   <div id="particles-js"></div>
-  
-<div id="wrapper">
-  <header class="header">
-    <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="文字を入力してください"></textarea>
-    <div class="btnarea">
-      
-      <table class="table">
-    <thead>
-        <tr>
-            <th colspan="2" class="white">行間</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><button id = "btnLineheightAdd" class="btn">↑</button></td>
-          <td><button id = "btnLineheightSub" class="btn">↓</button></td>
-        </tr>
-    </tbody>
-</table>
-       <table class="table">
-    <thead>
-        <tr>
-            <th colspan="2" class="white">文字サイズ</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><button id = "btnStrictSizeAdd" class = "btn">↑</button></td>
-          <td><button id = "btnStrictSizeSub" class = "btn">↓</button></td>
-        </tr>
-    </tbody>
-</table>
-      <!-- <button id="btnfontWeightAdd">文字の太さ↑</button>
-      <button id="btnfontWeightSub">文字の太さ↓</button> -->
-      <table class="table">
-    <thead>
-        <tr>
-            <th colspan="2" class="white">左マージン</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><button id = "btnMarginLeftAdd" class = "btn">+</button></td>
-          <td><button id = "btnMarginLeftSub" class = "btn">-</button></td>
-        </tr>
-    </tbody>
-</table>
-      <table class="table">
-    <thead>
-        <tr>
-            <th colspan="2" class="white">右マージン</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><button id = "btnMarginRightAdd" class = "btn">+</button></td>
-          <td><button id = "btnMarginRightSub" class = "btn">-</button></td>
-        </tr>
-    </tbody>
-</table>
 
-<table>
-  <td>
-    <button id="btn" class="btn">ボタン</button>
-  </td>
-  <td>
-    <button id="btnBackgroundColor" class="btn">背景色</button>
-  </td>
-  <td>
-    <select name="fontChange" id="fontChange" class="btn">
-      <option value="Gothic">ゴシック</option>
-      <option value="serif">明朝体</option>
-      <option value="Nico Moji">ニコモジ</option>
-      <option value="Zen Maru Gothic">全丸ゴシック</option>
-      <option value="Zen Kurenaido">全 Kurenaido</option>
-      <option value="Zen Antique">全 Antique</option>
-      <option value="Zen Antique Soft">全 Antique Soft</option>
-      <option value="Zen Old Mincho">全古明朝</option>
-      <option value="Zen Kaku Gothic New">全角ゴシック新</option>
-    </select>
-  </td>
-</table>
-    </div>
-  </header>
-  <div id="display" class="display"></div>
-  <!-- /wrapper--></div> 
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <div id="wrapper">
+    <header class="header">
+      <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="文字を入力してください"></textarea>
+
+      <div class="btnarea">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" class="white">行間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button id="btnLineheightAdd" class="btn">↑</button></td>
+              <td><button id="btnLineheightSub" class="btn">↓</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" class="white">文字サイズ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button id="btnStrictSizeAdd" class="btn">↑</button></td>
+              <td><button id="btnStrictSizeSub" class="btn">↓</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <button id="btnfontWeightAdd">文字の太さ↑</button>
+      <button id="btnfontWeightSub">文字の太さ↓</button> -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" class="white">左マージン</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button id="btnMarginLeftAdd" class="btn">+</button></td>
+              <td><button id="btnMarginLeftSub" class="btn">-</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" class="white">右マージン</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button id="btnMarginRightAdd" class="btn">+</button></td>
+              <td><button id="btnMarginRightSub" class="btn">-</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- ------------------------------------------------------------------------------------------------------- -->
+        <table>
+          <td>
+            <button id="btn" class="btn">ボタン</button>
+          </td>
+          <td>
+            <button id="btnBackgroundColor" class="btn">背景色</button>
+          </td>
+          <td>
+            <select name="fontChange" id="fontChange" class="btn">
+              <option value="Gothic">ゴシック</option>
+              <option value="serif">明朝体</option>
+              <option value="Nico Moji">ニコモジ</option>
+              <option value="Zen Maru Gothic">全丸ゴシック</option>
+              <option value="Zen Kurenaido">全 Kurenaido</option>
+              <option value="Zen Antique">全 Antique</option>
+              <option value="Zen Antique Soft">全 Antique Soft</option>
+              <option value="Zen Old Mincho">全古明朝</option>
+              <option value="Zen Kaku Gothic New">全角ゴシック新</option>
+            </select>
+          </td>
+        </table>
+      </div> <!-- btnarea  -->
+    </header>
+    <div id="display" class="display"></div>
+    <!-- /wrapper-->
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="read.js"></script>
   <script src="particles.js"></script>
 </body>
+
 </html>

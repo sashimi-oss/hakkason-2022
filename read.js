@@ -121,6 +121,7 @@ btnMarginRightSub.addEventListener('click', () => {
 })
 
 //マーカーのやつ--------------------------------------------------------------------------
+
 const text = document.querySelector('.display')
 
 
@@ -172,3 +173,4 @@ display.addEventListener('mouseup', () => {
     }
   }
 })
+
